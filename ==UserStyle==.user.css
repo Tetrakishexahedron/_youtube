@@ -1,57 +1,97 @@
 /* ==UserStyle==
-@name           `AdashimaaTube
+@name           `Youtube
 @author         sapondanaisriwan <sapondanaisriwan@gmail.com> (https://github.com/sapondanaisriwan)
-@description    If you want to submit a bug or request a feature please report via github issue. Since I receive so many emails, I can't reply to them all.
-@namespace      https://userstyles.world/user/sapondanaisriwan    
+@description    updated 8/2025
+@namespace      .
+@homepageURL    https://github.com/Tetrakishexahedron/_youtube/blob/main/youtube.user.css
 @version        2.5.2
 @license        MIT
 @preprocessor   stylus
 
+
+@var checkbox channelinfotest          "missing channel info test" 1
+@var checkbox viewcounttest2           " ↳live views count test" 1
+@var checkbox small                    " ↳squished titles" 1
+@var checkbox rich_renderer            " ↳enable rich render test" 1
+@var checkbox sub_experiment           " ↳sub button move test" 1
+@var checkbox viewdebug            	   " ↳debug bars" 0
+
 @var select customOldLayout            "⚒️ Old Layout" ["Enabled", "Disabled"]
-@var range borderRadius                "  ⚙️ Border Radius" [0, 0, 40, 1, 'px']
-@var range buttonRadius                "  ⚙️ Buttons Radius" [2, 0, 18, 1, 'px']
-@var range profileRadius               "  ⚙️ Profiles Radius" [50, 0, 50, 1, '%']
-@var checkbox oldWatchpage             "  📺 Old Watchpage" 1
-@var checkbox oldBackground            "  🖼️ Old Background" 1
-@var checkbox oldPlaylists             "  ▶️ Old Playlist" 1
-@var checkbox playlistOverlay          "  ▶️ Old Playlist Overlay" 1
-@var checkbox oldIcons                 "  🧓 Old Icons" 0
-@var checkbox oldSearchBox             "  🔎 Old Search box" 0
+@var range borderRadius                " ⚙️ Border Radius" [2, 0, 40, 1, 'px']
+@var range buttonRadius                " ⚙️ Buttons Radius" [2, 0, 18, 1, 'px']
+@var range profileRadius               " ⚙️ Profiles Radius" [50, 0, 50, 1, '%']
+@var checkbox oldWatchpage             " ↳ Old Watchpage" 1
+@var checkbox oldBackground            " ↳ Old Background" 1
+#var checkbox oldPlaylists             " ↳ Old Playlist" 1
+#var checkbox playlistOverlay          " ↳ Old Playlist Overlay" 1
+@var checkbox oldIcons                 " ↳ Old Icons" 1
+#var checkbox oldSearchBox             " ↳ Old Search box" 0
+@var checkbox chipRadius               " ↳ Chip button radius" 0
 
 @var select customMoreVideos           "⚒️ Video Appearance" ["Enabled", "Disabled"]
-@var range videoPerRow                 "  ⚙️ Videos Per Rows" [6, 1, 15, 1]
-@var range shortsPerRow                "  🩳 Shorts Per Row" [12, 1, 12, 1]
-@var checkbox hideProfile              "  🫣 Hide Channel Profile" 1
+@var range videoPerRow                 " ⚙️ Videos Per Rows" [4, 1, 15, 1]
+#var range shortsPerRow                " ⚙️ Shorts Per Row" [12, 1, 12, 1]
+@var checkbox antiShorts               " ❌ Hide Shorts" 1
+@var checkbox hideProfile              " ↳ Hide Channel Profile" 1
 
-@var select channelPage                "  📺 Channel Page" ["Enabled", "Auto","Disabled"]
-@var checkbox channelSearchResults     "    ↳ Search Result Grid " 1
-@var checkbox channelNoLimitWidth      "    ↳ No Limit Width" 0
+@var select channelPage                "📺 Channel Page" ["Enabled", "Auto","Disabled"]
+@var checkbox channelSearchResults     " ↳ Search Result Grid " 1
+@var checkbox channelNoLimitWidth      " ↳ No Limit Width" 0
 
-@var select searchPage                 "  🔎 Search Page" ["Disabled", "Enabled", "Auto"]
-@var checkbox channelGrouping          "    ↳ Channel Grouping" 0
-@var checkbox hideChannel              "    ↳ Hide Channel" 0
-@var checkbox hideRightSidebar         "    ↳ Hide Right Sidebar" 0
-@var checkbox searchPageNoLimitWidth   "    ↳ No Limit Width" 0
+@var select searchPage                 "🔎 Search Page" ["Disabled", "Enabled", "Auto"]
+@var checkbox channelGrouping          " ↳ Channel Grouping" 0
+@var checkbox hideChannel              " ↳ Hide Channel" 0
+@var checkbox hideRightSidebar         " ↳ Hide Right Sidebar" 0
+@var checkbox searchPageNoLimitWidth   " ↳ No Limit Width" 0
 
-@var select subPage                    "  🔔 Subscriptions Page" ["Enabled", "Disabled"]
-@var checkbox channelGrid              "    ↳ Channel Grid" 1
-@var checkbox subPageLayoutFix         "    ↳ Layout Fix" 1
-@var checkbox subPageNoWidthLimit      "    ↳ No Limit Width" 0
-@var select homePage                   "  🏠 Home Page" ["Enabled", "Disabled"]
-@var checkbox homePageLayoutFix        "    ↳ Layout Fix" 1
-@var select hashtagPage                "  🔖 Hashtag Page" ["Enabled", "Disabled"]
+@var select subPage                    "🔔 Subscriptions Page" ["Enabled", "Disabled"]       
+@var checkbox channelGrid              " ↳ Channel Grid" 1
+@var checkbox subPageLayoutFix         " ↳ Layout Fix" 1
+@var checkbox subPageNoWidthLimit      " ↳ No Limit Width" 0
+
+@var select homePage                   "🏠 Home Page" ["Enabled", "Disabled"]
+@var checkbox homePageLayoutFix        " ↳ Layout Fix" 1
+
+@var select hashtagPage                "🔖 Hashtag Page" ["Enabled", "Disabled"]
 
 @var select customAppearance           "⚒️ Youtube Appearance" ["Enabled", "Disabled"]
-@var checkbox blueCheckMark            "  ✅ Blue Check Mark" 0
-@var checkbox scroll_Bar               "  🌑 Dark Scroll Bar" 1
-
-@var checkbox displayFullTitle         "  🎦 Full Title For Videos" 0
-@var select likeDislike                "  🎨 Like/Dislike colors" ['None', 'Navy-Blue', 'Classic']
-@var checkbox moreAnimation            "  🎬 More Animations" 0
-@var checkbox watchedOverlay           "  👀 Watched Overlay" 0
+@var checkbox displayFullTitle         " ↳ Full Titles" 1
+@var checkbox moreAnimation            " ↳ More Animations" 1
+@var checkbox watchedOverlay           " ↳ Watched Overlay" 0
+#var select likeDislike                " ↳ Like/Dislike colors" ['None', 'Navy-Blue', 'Classic']
+@var checkbox blueCheckMark            " ↳ Blue Check Mark" 1
+#var checkbox scroll_Bar               " ↳ Dark Scroll Bar" 1
 
 @var select customVideoPage            "⚒️ Watch Page" ["Enabled", "Disabled"]
-@var select displayDislikeText         "  👎 Display Dislike Text" {
+@var checkbox descriptionExpanded      " ↳ Description Expanded" 0
+@var checkbox hideLiveChat             " ↳ Hide Live Chat" 1
+@var checkbox hideTabs                 " ↳ Hide Tabs" 0
+@var checkbox chapterSection           " ↳ Hide Chapters Section" 0
+@var checkbox hideAnnotation           " ↳ Hide Annotations" 0
+@var checkbox hideRecommendPL          " ↳ Hide Recommended" 0
+@var checkbox commentSection           " ↳ Hide Comments" 0
+@var checkbox hideRightSideVideos      " ↳ Hide Right Side Videos" 0
+@var checkbox hideLikeAnimation        " ↳ Hide Like Animation" 0
+
+... menu
+#var checkbox askBtn                   " ↳ Hide AI Ask Button" 1
+@var checkbox downloadBtn              " ↳ Hide Download Button" 1
+@var checkbox thanksBtn                " ↳ Hide Thanks Button" 0
+@var checkbox clipBtn                  " ↳ Hide Clip Button" 0
+@var checkbox saveBtn                  " ↳ Hide Save Button" 0
+
+
+#var checkbox shareBtn                 " ↳ Hide Share Button" 0
+#var checkbox hidecommuPosts           " ↳ Hide Community Posts" 0
+#var checkbox hideMoviesSection        " ↳ Hide Movies Section" 1
+@var checkbox hideDonation             " ↳ Hide Donation Shelf" 1
+@var checkbox tranScriptBtn            " ↳ Hide Transcript Button" 1
+@var checkbox textBtn                  " ↳ Hide Text Buttons" 0
+@var checkbox endCards                 " ↳ Hide End Screen" 0
+@var checkbox gameSection              " ↳ Hide Game Section" 1
+@var checkbox musicSection             " ↳ Hide Music Section" 1
+
+@var select displayDislikeText         " 👎 Display Dislike Text" {
     "None": "None",
     "English": "English",
     "ภาษาไทย": "Thai",
@@ -62,39 +102,7 @@
     "Русский": "Russia",
     "Français": "French"
 }
-@var checkbox descriptionExpanded      "  📭 Description Expanded" 0
-@var checkbox hideTabs                 "  ❌ Hide Tabs" 0
-@var checkbox antiShorts               "  ❌ Hide Shorts" 1
-@var checkbox hideAnnotation           "  ❌ Hide Annotations" 0
-@var checkbox hideRecommendPL          "  ❌ Hide Recommended" 0
-@var checkbox hidecommuPosts           "  ❌ Hide Community Posts" 0
-@var checkbox hideMoviesSection        "  ❌ Hide Movies Section" 1
-@var checkbox hideDonation             "  💵 Hide Donation Shelf" 0
-@var checkbox hideRightSideVideos      "  🎦 Hide Right Side Videos" 0
-@var checkbox hideLikeAnimation        "  👍 Hide Like Animation" 0
-@var checkbox hideLiveChat             "  💬 Hide Live Chat" 0
-@var checkbox shareBtn                 "  ➡️ Hide Share Button" 0
-@var checkbox downloadBtn              "  ⬇️ Hide Download Button" 0
-@var checkbox clipBtn                  "  ✂️ Hide Clip Button" 0
-@var checkbox thanksBtn                "  🙏 Hide Thanks Button" 0
-@var checkbox tranScriptBtn            "  📜 Hide Transcript Button" 0
-@var checkbox saveBtn                  "  💾 Hide Save Button" 0
-@var checkbox textBtn                  "  💬 Hide Text Buttons" 0
-@var checkbox endCards                 "  💳 Hide End Screen" 0
-@var checkbox commentSection           "  💬 Hide Comments" 0
-@var checkbox gameSection              "  🎮 Hide Game Section" 0
-@var checkbox musicSection             "  🎵 Hide Music Section" 0
-@var checkbox chapterSection           "  ❌ Hide Chapters Section" 0
 ==/UserStyle== */
-/*
-Please report bugs via my email, github issue and discord(If I have some free time, I'll fix them)
-Contact: sapondanaisriwan@gmail.com
-Support me: https://ko-fi.com/sapondanaisriwan 
-Support me: https://ko-fi.com/sapondanaisriwan
-Support me: https://ko-fi.com/sapondanaisriwan
-Support me: https://ko-fi.com/sapondanaisriwan
-Support me: https://ko-fi.com/sapondanaisriwan
-*/
 @-moz-document regexp("^https:\\/\\/www\\.youtube\\.com.+") {
 
     :root {
@@ -160,6 +168,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
     }
     
     /* Check if broswer support :has pseudo selectors */
+    
     @css {
         @supports not selector(:has(*)) {
 
@@ -224,10 +233,103 @@ Support me: https://ko-fi.com/sapondanaisriwan
         }
     }
 
+    
+    
+     
+
+    
+    
+    
     if (customMoreVideos=="Enabled") {
 
         isShortsSlim = "ytd-rich-item-renderer[is-slim-media]"
 
+        /* ❌ Anti-Shorts */
+        if (antiShorts) {
+            /* These rules won't be applied in browsers that don't support :has() */
+            /* https://www.youtube.com/results?search_query=shorts */
+            ytd-video-renderer[is-search],
+            ytd-compact-video-renderer,
+            ytd-reel-item-renderer,
+            ytd-grid-video-renderer,
+            ytd-rich-item-renderer {
+                &:has(a[href^="/shorts/"]) {
+                    display: none i;
+                }
+            }
+
+            /* FireFox users  */
+            #contents > ytd-rich-item-renderer:has(a[href^="/shorts/"]) {
+                display: none i;
+            }
+            ytd-reel-shelf-renderer, /*new fix*/
+            ytd-watch-flexy #contents.ytd-item-section-renderer > ytd-reel-shelf-renderer.ytd-item-section-renderer {
+                display: none;
+            }
+			ytd-exploratory-results-renderer.ytd-item-section-renderer,
+			ytd-horizontal-card-list-renderer.ytd-item-section-renderer:not(:first-child),
+			ytd-reel-shelf-renderer.ytd-item-section-renderer,
+			grid-shelf-view-model.ytd-item-section-renderer,
+			{
+				display:none /*new shorts refrences i think*/
+			}
+			
+            /* https://www.youtube.com/@MrBeast2/shorts */
+            ytd-rich-grid-renderer[is-shorts-grid] {
+                display: none;
+            }
+
+            /* https://www.youtube.com/@MrBeast2/featured */
+            #contents > ytd-item-section-renderer > #contents ytd-reel-shelf-renderer:has(yt-horizontal-list-renderer > #scroll-container > #items > ytd-reel-item-renderer #dismissible > ytd-thumbnail > a#thumbnail[href^="/shorts/"]) {
+                display: none;
+            }
+
+            ytd-rich-section-renderer:has(#content > ytd-rich-shelf-renderer[is-shorts]) {
+                display: none;
+            }
+
+            #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer,
+            ytd-mini-guide-entry-renderer a.ytd-mini-guide-entry-renderer{
+                &[title="Shorts"] {
+                    display: none;
+                }
+            }
+
+            /* https://www.youtube.com/hashtag/shorts */
+            [page-subtype="hashtag-landing-page"] {
+                ytd-rich-item-renderer:has(#content > ytd-rich-grid-media > #dismissible > ytd-thumbnail > a#thumbnail[href^="/shorts/"]) {
+                    display: none;
+                }
+
+                ytd-rich-grid-renderer {
+                    /* Set to be treated as if they were the children of their parent element */
+                    #contents {
+                        fixYoutubeLayout();
+                    }
+                }
+            }
+            
+            
+
+            ytd-shorts {
+                display: none;
+            }
+
+            ytd-rich-shelf-renderer[is-shorts] {
+                display: none;
+            }
+            
+            /* https://www.youtube.com/feed/subscriptions?flow=2 */
+            ytd-two-column-browse-results-renderer[page-subtype="subscriptions"] > #primary.ytd-two-column-browse-results-renderer > ytd-section-list-renderer[page-subtype="subscriptions"] > #contents.ytd-section-list-renderer > ytd-item-section-renderer.ytd-section-list-renderer:has(#contents.ytd-item-section-renderer > ytd-shelf-renderer.ytd-item-section-renderer > #dismissible.ytd-shelf-renderer > #contents.ytd-shelf-renderer > ytd-expanded-shelf-contents-renderer.ytd-shelf-renderer > #grid-container.ytd-expanded-shelf-contents-renderer > ytd-video-renderer > #dismissible > ytd-thumbnail > a#thumbnail[href^="/shorts/"]) {
+                display: none;
+            }
+
+            /* Trending */
+            [page-subtype="trending"] ytd-video-renderer:has(#dismissible.ytd-video-renderer > ytd-thumbnail a#thumbnail[href^="/shorts/"]) {
+                display: none i;
+            }
+        }
+        
         ytd-rich-shelf-renderer[is-shorts] {
             --ytd-rich-grid-slim-items-per-row: shortsPerRow;
             &[is-show-more-hidden] {
@@ -346,7 +448,9 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 min-width: calc(100% / var(--video-per-row) - 1.6rem) i;
                 max-width: calc(100% / var(--video-per-row) - 1.6rem) i;
             }
-
+            
+            
+            
             /* 🏠 Restore Old Homepage */
             if (hideProfile) {
                 /* Remove unloaded channel profile  when refresh a page */
@@ -369,7 +473,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 }
                 
                 ytd-rich-item-renderer:not([is-reel-item-style-avatar-circle]) {
-                    width: calc(100%/var(--video-per-row) - 4px - 0.01px)
+                    width: calc(100%/var(--video-per-row) - 16px - 0.01px)
                 }
                 
                 ytd-rich-grid-renderer #contents #contents > ytd-rich-item-renderer:not([is-reel-item-style-avatar-circle]) {
@@ -379,7 +483,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 }
 
                 #contents.ytd-rich-grid-renderer {
-                    padding-top: 0;
+                    padding-top: auto;
                 }
                 #content.ytd-rich-section-renderer, {
                     margin: 0;
@@ -470,8 +574,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
                     /* Remove description */
                     #description.ytd-channel-renderer,
 
-                    /* Remove bell icon */
-                    #notification-preference-button,
+                    
 
                     /* Remove videos count*/
                     #metadata.ytd-channel-renderer > span:nth-last-child(-n + 2) {
@@ -1016,14 +1119,6 @@ Support me: https://ko-fi.com/sapondanaisriwan
 
     if (customOldLayout=="Enabled") {
 
-        /* my stuff */
-        with-chipbar style-scope ytd-app style-scope ytd-app{
-            frosted-glass.with-chipbar.ytd-app{
-            opacity: 0;
-            }
-        }
-        
-        
         if (oldSearchBox) {
             ytd-searchbox.ytd-masthead {
                 > #search-icon-legacy.ytd-searchbox,
@@ -1173,16 +1268,22 @@ Support me: https://ko-fi.com/sapondanaisriwan
 
         if (oldBackground) {
             
-            #header.ytd-rich-grid-renderer {
+            
+            #header.ytd-rich-grid-renderer { /* top bar width */
                 width: 100%;
             }
             
-            yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer:first-of-type {
+            yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer:first-of-type { 
                 margin-left: 24px;
             }
             
+            /*new fix*/
+            yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer[chip-style], 
+            yt-chip-cloud-chip-renderer.yt-chip-cloud-renderer[chip-style]{ 
+                border:none i; /*remove extra chip border*/
+            }
             html:not([dark]) ytd-masthead[is-watch-page][theater] {
-                background-color: var(--yt-spec-black-1) i;
+                background-color:var(--yt-spec-black-1) i;
             }
 
             /* Live chat */
@@ -1214,11 +1315,11 @@ Support me: https://ko-fi.com/sapondanaisriwan
             }
             
             ytd-app[darker-dark-theme] {
-                background: var(--yt-spec-general-background-a) i;
+                background: var(--yt-spec-general-background-a) i; /*youtube background color*/
             }
 
             ytd-browse[page-subtype="channels"] {
-                background: var(--yt-spec-general-background-b) i;
+                background: var(--yt-spec-general-background-b) i; /*chanel background color*/
             }
             
             [page-subtype="home"] #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
@@ -1313,6 +1414,12 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 }
             }
             
+            /*new fix*/
+            ytd-mini-guide-renderer[frosted-glass]{   /*home page left bar light gray to match*/
+                background-color: var(--yt-spec-brand-background-primary);
+            }
+            
+            
             /* Join btn */
 /*             .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline {
                 color: var(--yt-spec-call-to-action);
@@ -1375,8 +1482,8 @@ Support me: https://ko-fi.com/sapondanaisriwan
             display: none if hideDonation;
         }
         
-        #meta-contents[hidden] ytd-expander.ytd-video-secondary-info-renderer[collapsed] {
-            --ytd-expander-collapsed-height: 100% i if descriptionExpanded;
+        #description[hidden] ytd-text-inline-expander[collapsed] {
+            --ytd-text-inline-expander: 100% i if descriptionExpanded;
         }
         
         if (displayDislikeText !="None") {
@@ -1425,89 +1532,61 @@ Support me: https://ko-fi.com/sapondanaisriwan
             display: none if hideAnnotation;
         }
 
-        /* ❌ Anti-Shorts */
-        if (antiShorts) {
-            /* These rules won't be applied in browsers that don't support :has() */
-            /* https://www.youtube.com/results?search_query=shorts */
-            ytd-video-renderer[is-search],
-            ytd-compact-video-renderer,
-            ytd-reel-item-renderer,
-            ytd-grid-video-renderer,
-            ytd-rich-item-renderer {
-                &:has(a[href^="/shorts/"]) {
-                    display: none i;
-                }
-            }
-
-            /* FireFox users  */
-            #contents > ytd-rich-item-renderer:has(a[href^="/shorts/"]) {
-                display: none i;
-            }
-
-            ytd-watch-flexy #contents.ytd-item-section-renderer > ytd-reel-shelf-renderer.ytd-item-section-renderer {
-                display: none;
-            }
-            
-            /* https://www.youtube.com/@MrBeast2/shorts */
-            ytd-rich-grid-renderer[is-shorts-grid] {
-                display: none;
-            }
-
-            /* https://www.youtube.com/@MrBeast2/featured */
-            #contents > ytd-item-section-renderer > #contents ytd-reel-shelf-renderer:has(yt-horizontal-list-renderer > #scroll-container > #items > ytd-reel-item-renderer #dismissible > ytd-thumbnail > a#thumbnail[href^="/shorts/"]) {
-                display: none;
-            }
-
-            ytd-rich-section-renderer:has(#content > ytd-rich-shelf-renderer[is-shorts]) {
-                display: none;
-            }
-
-            #endpoint.yt-simple-endpoint.ytd-guide-entry-renderer,
-            ytd-mini-guide-entry-renderer a.ytd-mini-guide-entry-renderer{
-                &[title="Shorts"] {
-                    display: none;
-                }
-            }
-
-            /* https://www.youtube.com/hashtag/shorts */
-            [page-subtype="hashtag-landing-page"] {
-                ytd-rich-item-renderer:has(#content > ytd-rich-grid-media > #dismissible > ytd-thumbnail > a#thumbnail[href^="/shorts/"]) {
-                    display: none;
-                }
-
-                ytd-rich-grid-renderer {
-                    /* Set to be treated as if they were the children of their parent element */
-                    #contents {
-                        fixYoutubeLayout();
-                    }
-                }
-            }
-
-            ytd-shorts {
-                display: none;
-            }
-
-            ytd-rich-shelf-renderer[is-shorts] {
-                display: none;
-            }
-            
-            /* https://www.youtube.com/feed/subscriptions?flow=2 */
-            ytd-two-column-browse-results-renderer[page-subtype="subscriptions"] > #primary.ytd-two-column-browse-results-renderer > ytd-section-list-renderer[page-subtype="subscriptions"] > #contents.ytd-section-list-renderer > ytd-item-section-renderer.ytd-section-list-renderer:has(#contents.ytd-item-section-renderer > ytd-shelf-renderer.ytd-item-section-renderer > #dismissible.ytd-shelf-renderer > #contents.ytd-shelf-renderer > ytd-expanded-shelf-contents-renderer.ytd-shelf-renderer > #grid-container.ytd-expanded-shelf-contents-renderer > ytd-video-renderer > #dismissible > ytd-thumbnail > a#thumbnail[href^="/shorts/"]) {
-                display: none;
-            }
-
-            /* Trending */
-            [page-subtype="trending"] ytd-video-renderer:has(#dismissible.ytd-video-renderer > ytd-thumbnail a#thumbnail[href^="/shorts/"]) {
-                display: none i;
-            }
-        }
-
         /* ❌ Remove Tabs */
         #header ytd-feed-filter-chip-bar-renderer,
         ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
             display: none if hideTabs;
         }
 
+        /*------------------------------------------------------------------------------*/
+         /*  ✨ Hide Ask Button */
+        if (askBtn == 1){
+            ytd-menu-service-item-renderer[use-icons]:nth-child(1){ /*first option on everyhitng*/
+                display: none; 
+            }
+        }
+        /*  ⬇️ Hide Download Button */
+        if (downloadBtn){
+            ytd-menu-service-item-download-renderer
+            .ytDownloadListItemViewModelHost{
+                display: none; 
+            }
+        }
+        /*  🙏 Hide Thanks Button */
+        if (thanksBtn){
+            ytd-menu-service-item-renderer[use-icons]:nth-child(3) {
+                display: none; 
+            }
+        }
+        /*  ✂️ Hide Clip Button */
+        if (clipBtn){
+            ytd-menu-service-item-renderer[use-icons]:nth-child(4) {
+                display: none; 
+            }
+        }
+        /*  💾 Hide Save Button */
+        if (saveBtn){
+            ytd-menu-service-item-renderer[use-icons]:nth-child(5) {
+                display: none; 
+            }
+        }
+        if (1==1){ /*home screen ... menu*/
+            .ytListViewModelHost > yt-list-item-view-model:nth-child(1) /*queue*/
+            .ytListViewModelHost > yt-list-item-view-model:nth-child(2) /*watch later*/
+            {
+                background: blueviolet;
+                display:none
+            }
+
+        }
+
+        /*------------------------------------------------------------------------------*/
+        
+        
+        
+        
+        
+        
         /*  ⬇️ Hide Download Button */
         ytd-download-button-renderer {
             display: none if downloadBtn;
@@ -1519,7 +1598,8 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 display: none;
             }
         }
-
+        
+        
         /* 💬 Hide Comments Section */
         ytd-comments {
             display: none if commentSection;
@@ -1529,6 +1609,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
 
             /* Support all language except the browser that does not support :has */
             /* 🙏 Hide Thanks Button */
+    
             &:has([d="M12.7\,12l6.6\,6.6l-0.7\,0.7L12\,12.7l-6.6\,6.6l-0.7-0.7l6.6-6.6L4.6\,5.4l0.7-0.7l6.6\,6.6l6.6-6.6l0.7\,0.7L12.7\,12z"]),
             &:has(path[d="M16.5\,3C19.02\,3\,21\,5.19\,21\,7.99c0\,3.7-3.28\,6.94-8.25\,11.86L12\,20.59l-0.74-0.73l-0.04-0.04C6.27\,14.92\,3\,11.69\,3\,7.99 C3\,5.19\,4.98\,3\,7.5\,3c1.4\,0\,2.79\,0.71\,3.71\,1.89L12\,5.9l0.79-1.01C13.71\,3.71\,15.1\,3\,16.5\,3 M16.5\,2c-1.74\,0-3.41\,0.88-4.5\,2.28 C10.91\,2.88\,9.24\,2\,7.5\,2C4.42\,2\,2\,4.64\,2\,7.99c0\,4.12\,3.4\,7.48\,8.55\,12.58L12\,22l1.45-1.44C18.6\,15.47\,22\,12.11\,22\,7.99 C22\,4.64\,19.58\,2\,16.5\,2L16.5\,2z M11.33\,10.86c0.2\,0.14\,0.53\,0.26\,1\,0.36c0.47\,0.1\,0.86\,0.22\,1.18\,0.35 c0.99\,0.4\,1.49\,1.09\,1.49\,2.07c0\,0.7-0.28\,1.27-0.83\,1.71c-0.33\,0.26-0.73\,0.43-1.17\,0.54V17h-2v-1.16 c-0.18-0.05-0.37-0.1-0.53-0.19c-0.46-0.23-0.92-0.55-1.18-0.95C9.15\,14.48\,9.06\,14.24\,9\,14h2c0.05\,0.09\,0.07\,0.18\,0.15\,0.25 c0.23\,0.19\,0.54\,0.29\,0.92\,0.29c0.36\,0\,0.63-0.07\,0.82-0.22s0.28-0.35\,0.28-0.59c0-0.25-0.11-0.45-0.34-0.6s-0.59-0.27-1.1-0.39 c-1.67-0.39-2.51-1.16-2.51-2.34c0-0.68\,0.26-1.26\,0.78-1.71c0.28-0.25\,0.62-0.43\,1-0.54V7h2v1.12c0.46\,0.11\,0.85\,0.29\,1.18\,0.57 C14.59\,9.05\,14.9\,9.48\,15\,10h-2c-0.04-0.09-0.1-0.17-0.16-0.24c-0.17-0.19-0.44-0.29-0.81-0.29c-0.32\,0-0.56\,0.08-0.74\,0.24 c-0.17\,0.16-0.26\,0.36-0.26\,0.6C11.03\,10.53\,11.13\,10.72\,11.33\,10.86z"]),
             &:has([d="M11 17h2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1h-3v-1h4V8h-2V7h-2v1h-1c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3v1H9v2h2v1zm5.5-15c-1.74 0-3.41.88-4.5 2.28C10.91 2.88 9.24 2 7.5 2 4.42 2 2 4.64 2 7.99c0 4.12 3.4 7.48 8.55 12.58L12 22l1.45-1.44C18.6 15.47 22 12.11 22 7.99 22 4.64 19.58 2 16.5 2zm-3.75 17.85-.75.74-.74-.73-.04-.04C6.27 14.92 3 11.69 3 7.99 3 5.19 4.98 3 7.5 3c1.4 0 2.79.71 3.71 1.89L12 5.9l.79-1.01C13.71 3.71 15.1 3 16.5 3 19.02 3 21 5.19 21 7.99c0 3.7-3.28 6.94-8.25 11.86z"]){
@@ -1756,30 +1837,30 @@ Support me: https://ko-fi.com/sapondanaisriwan
 
         /* 🎦 Display Full Title For Videos */
         if displayFullTitle {
-            ytd-grid-video-renderer,
-            ytd-rich-grid-media[mini-mode] {
-                #video-title {
-                    &.yt-simple-endpoint.ytd-grid-video-renderer,
-                    &.ytd-rich-grid-media {
-                        max-height: unset i;
-                        -webkit-line-clamp: unset i;
-                    }
-                }
-            }
-
-            #video-title {
-                &.ytd-compact-video-renderer,
-                &.ytd-rich-grid-media,
-                &.ytd-video-renderer,
-                &.ytd-rich-grid-slim-media,
-                &.ytd-grid-playlist-renderer,
-                &.ytd-reel-item-renderer {
+                
+                .yt-lockup-metadata-view-model__title
+                .yt-lockup-metadata-view-model--standard.yt-lockup-metadata-view-model--rich-grid-legacy-typography
+                KeyDisplayFullTitle,
+                ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
+                ytd-rich-grid-media[mini-mode] #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
+                ytd-grid-video-renderer #video-title.ytd-rich-grid-media,
+                ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media,
+                .yt-lockup-metadata-view-model-wiz--standard.yt-lockup-metadata-view-model-wiz--rich-grid-legacy-typography .yt-lockup-metadata-view-model-wiz__title {
                     max-height: unset i;
                     -webkit-line-clamp: unset i;
                 }
-            }
+                #video-title.ytd-compact-video-renderer,
+                #video-title.ytd-rich-grid-media,
+                #video-title.ytd-video-renderer,
+                #video-title.ytd-rich-grid-slim-media,
+                #video-title.ytd-grid-playlist-renderer,
+                #video-title.ytd-reel-item-renderer {
+                    max-height: unset i;
+                    -webkit-line-clamp: unset i;
+                }
         }
-
+        
+                
         /* 🌑 Dark Scroll Bar */
         if (scroll_Bar) {
             /* scrollbar */
@@ -1820,25 +1901,28 @@ Support me: https://ko-fi.com/sapondanaisriwan
         }
     }
 
+    
+    
+    
+    
     /* REVERT WATCH PAGE */
     if (customOldLayout=="Enabled" && oldWatchpage) {
 
 /*         ytd-watch-metadata {
             display: none i;
         } */
-
         #bottom-row.ytd-watch-metadata {
-            display: none i;
+            display: none i
         }
         
         #meta-contents[hidden],
         #info-contents[hidden] {
-            display: block i;
+            display: block i
         }
 
         /* Remove morden description when expaneded */
         #description.ytd-watch-metadata {
-            display: none;
+            display: none
         }
         
         /* Temporary fix */
@@ -1854,9 +1938,434 @@ Support me: https://ko-fi.com/sapondanaisriwan
         ytd-watch-metadata ytd-metadata-row-container-renderer {
             display: none;
         }
+        #owner.ytd-watch-metadata{
+            display:none
+        }
         
-        #owner.ytd-watch-metadata {
-            visibility: hidden;
+        /*---------------------------------------------------------------------*/
+
+        /*
+            ytd-watch-info-text .click() = expand description
+            #ytd-watch-info-text.ytd-watch-metadata:hover = show new numbers
+            
+            
+        */
+        /*new fix  profile pics??*/
+        #info-section.ytd-channel-renderer{ /*limit channel sidebar recomdndation size to not exceed screen width*/
+            /*max-width:100px i;*/ 
+            min-width:216px i;
+            width:auto i
+        }
+        #avatar-section.ytd-channel-renderer{
+            /*max-width:100px i;
+            min-width:166px i;*/
+            width:auto i
+        }
+        
+
+        if channelinfotest == 1{ 
+            
+            ytd-video-secondary-info-renderer{
+                display:none /*remove old description*/
+            }
+            #bottom-row.ytd-watch-metadata,     /*collapsed description*/
+            #description.ytd-watch-metadata{    /*full description*/
+                display: block i               /*new descriptions to block*/
+            }
+            ytd-watch-info-text{
+                display:none /*remove date and views*/
+            }
+
+            /*description box*/
+            ytd-watch-metadata:not([description-collapsed]) #description.ytd-watch-metadata,
+            ytd-watch-metadata[description-collapsed] #description.ytd-watch-metadata{/* both description boxes*/
+                display: flex ; /*display new description*/
+                background: transparent /*remove bg*/
+                border-bottom: solid 0.5px var(--yt-spec-10-percent-layer) /*make line under description*/
+                border-radius: 0px /*make line on bottom straight*/
+                pointer-events:none /*removes access to expand discription by clicking on it*/
+                margin-bottom:-40px /*moce comment section up*/
+            }
+            #bottom-row.ytd-watch-metadata
+            #description.ytd-watch-metadata{
+                cursor: text i/*text cursor for description*/ 
+            }
+            ytd-watch-metadata:not([description-collapsed]) #description.ytd-watch-metadata,
+            .yt-core-attributed-string--link-inherit-color .yt-core-attributed-string__link--call-to-action-color{
+                pointer-events: all; /*make description links clickable*/
+            }
+            ytd-text-inline-expander{ /*description text*/
+                margin-left: 52px /*indent in*/
+                margin-bottom: 14px /*indent up*/
+                margin-top:56px;
+            }
+            #collapse.ytd-text-inline-expander,
+            #expand.ytd-text-inline-expander{ /*more button*/
+                position:relative; /*unlock more button*/
+                left:0px i; /*set more button to left side*/
+                color: var(--yt-spec-text-secondary) /*set color to gray*/
+                pointer-events: all /*lets only the "more" buttone expand descripion*/
+            }
+            yt-interaction.rounded-large .fill.yt-interaction{
+                border-radius: 0 /*set hover over description box to have no rounded corners*/
+            }
+            .item.ytd-watch-metadata{
+                display:none /*remove live chat*/
+            }
+            ytd-video-primary-info-renderer{
+                display:none /*remove old info block*/
+            }
+
+
+
+
+
+            if(viewcounttest2==1){
+
+                ytd-watch-info-text{
+                    display: grid /*idk why grid*/ 
+                }
+                .bold.yt-formatted-string:not(a):-moz-only-whitespace{
+                    grid-row:1 /*empty space on top*/
+                    grid-column:10 /*empty space always to the right*/
+                    pointer-events:none /*no interaction*/
+                }
+                .bold.yt-formatted-string{
+                    cursor:text i/*selection for views/date*/
+                }
+
+                /*ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata*/
+                #info-container.ytd-watch-info-text{
+                    margin-top:-108px /*move info block up*/
+                    margin-left:-0.8em/*move info block left*/
+                    pointer-events:none /*disables all interaction with info (want to select views*/ 
+                    display:grid 
+                    width: max-content
+                    height:min-content
+                    row-gap:20px /*active row gap*/
+                }
+
+                .animatedRollingNumberHost	 	/*live views and day*/
+                #view-count.ytd-watch-info-text /*"views"*/
+                #date-text.ytd-watch-info-text  /*___ ago*/{	
+                    width: max-content
+                    height:min-content
+                } /*old*/
+
+
+                /*wanna select text but can't**/
+                .bold.yt-formatted-string:not(a) /*old*/
+                span.yt-formatted-string:nth-child(1) /*"views"*/
+                span.yt-formatted-string:nth-child(3) /*___ ago*/ { /*views and day*/
+                    font-weight: normal /*un-bold info block*/
+                    margin-right: 8px
+                    grid-row:2 /*views at bottom*/
+                    margin-top:5px
+                    cursor:text i /*simply can't get date/views to select*/ 
+                }
+
+                
+                ytd-watch-info-text[detailed] #info.ytd-watch-info-text
+                ytd-watch-info-text:not([detailed]) #info.ytd-watch-info-text{
+                    display:grid
+                    grid-column: 1 / 10 /*stupid number cause -1 didn't work*/
+                    row-gap:18px /*static row gap*/
+                    grid-row: 1 
+                    min-height: 25px /*if empty set hight to normal hight*/
+                    
+                }
+            
+                a.yt-simple-endpoint.yt-formatted-string /*hashtags*/
+                a.yt-simple-endpoint.yt-formatted-string[is-empty]
+                a.yt-simple-endpoint.yt-formatted-string:visited{ 
+                    pointer-events: visible i /*allow hastags to be clicked on*/
+                    margin-right: 8px /*speace between tags*/
+                    grid-row:1 /*hastags at top*/
+                    color: #3ea6ff /*sets link color to blue by default*/
+                    cursor: pointer i; /*right cursor on click*/
+                }	
+                #description-placeholder.ytd-watch-metadata{ /*no description exception*/
+                    position: absolute; /*allow movement*/
+                    margin-top: 53px; /*lower test*/
+                    padding-top:3px
+                    padding-left:50px /*indent*/
+                }
+                ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column]{
+                    margin-left: calc(var(--ytd-rich-grid-item-margin)/2) /*make everyhting on grid*/
+                }
+            }
+            
+            
+            
+
+			ytd-watch-metadata[actions-on-separate-line] #top-row.ytd-watch-metadata,
+            #top-row.ytd-watch-metadata{
+                display:flex;
+                padding-bottom:0px;
+                border-bottom: 1px solid var(--yt-spec-10-percent-layer); /*line on bottom*/
+            }
+
+            .animated-action__container{ /*release bell icon*/
+                position:absolute
+            }
+            ytd-subscribe-button-renderer.style-scope {
+                width:unset i; /*keep sub button in place???? why 38px i hate you youtube*/
+            }
+            .ryd-tooltip-bar-container{ 
+                top:-15px i; /*move like/dislike bar up*/
+            }
+            .yt-formatted-string:-moz-only-whitespace{
+                grid-column: 10 /*force whitespace over*/
+                grid-row:1 /*whitespace to top*/
+            }
+            #menu.ytd-watch-metadata{
+                margin-top:2px; /*move whole likes dislike thing down*/
+            }
+            #top-row.ytd-video-secondary-info-renderer{ 
+                padding-top: 5px; /*channel info hieght*/
+            }
+
+            #top-row.ytd-watch-metadata {
+                height: 60px;  /*hashtag not inside title for single line titles*/
+                margin-top:-1.5%
+                margin-top:-3% 
+
+            } 
+            .super-title.ytd-video-primary-info-renderer{
+                line-height:1.5rem;
+                line-height:4.5rem; /*hastag height*/
+                height:16px; /*view count height*/
+            }
+
+            #title{
+                margin-top:-10px;
+                margin-top:-9px;
+            }
+            #expandable-metadata.ytd-watch-flexy:not(:empty){
+                display:none /*remove ai summary*/
+            }
+            ytd-comments{
+                margin-top: 70px; /*push down comments*/
+            }
+            .yt-spec-touch-feedback-shape--thumbnail-size-large .yt-spec-touch-feedback-shape__hover-effect{
+                background:transparent i
+            }
+            if small ==1{
+                ytd-watch-metadata[actions-on-separate-line] 
+                #top-row.ytd-watch-metadata{
+                    height:55px /*bottom bar height*/
+                }
+                #info-container.ytd-watch-info-text{
+                    margin-top:-82px /*move info block up*/
+                    row-gap:14px /*active view count hieght*/
+                }
+                ytd-watch-info-text[detailed] #info.ytd-watch-info-text
+                ytd-watch-info-text:not([detailed]) #info.ytd-watch-info-text{
+                    row-gap:15px /*static view count hieght*/
+                }
+                .ryd-tooltip-bar-container{ 
+                    top:-15px i; /*move like/dislike bar up*/
+                }
+                #title{
+                    margin-top:-20px;
+                    margin-bottom:-35px
+                }
+                #menu .smartimation--enable-masking .smartimation__content
+                ytd-menu-renderer[has-items] yt-button-shape.ytd-menu-renderer
+                .ytd-menu-renderer[button-renderer] + yt-button-view-model.ytd-menu-renderer
+                #flexible-item-buttons.ytd-menu-renderer:not(:empty) > yt-button-view-model.ytd-menu-renderer{
+                    margin-top: 25px /*like share margin*/
+                }
+                /*sub button stuff*/
+                .smartimation__content{
+                    display:flex /*set up*/
+                    flex-direction:row-reverse
+                }
+                
+                ytd-watch-metadata .ytAnimatedActionContentWithBackground{ /*notif bell*/
+                    position: relative /*let notif bell same line*/
+                }
+                
+                yt-smartimation.ytd-subscribe-button-renderer { /*messes up sub*/
+                    display: flex;
+                    position: relative
+                    justify-content:end /*justify right*/
+                }
+                
+                if sub_experiment == 1{
+                    ytd-video-owner-renderer{ /*channel, join, sub*/
+                        margin-right:0% 
+                        /*width:276px*/
+                        min-width:250zpx
+                        max-width:150%
+                    }
+                    /*join button messing things up?*/
+                }
+                
+                
+                .ytp-delhi-modern:not(.ytp-player-minimized) .ytp-progress-bar-container{
+                    bottom:35px
+                    margin-left:10px
+                    height:5px
+                    top:0px
+                }
+                .ytp-delhi-modern .ytp-progress-list{
+                    background:rgba(255,255,255,.2)
+                }
+                /**/
+                 .ytp-delhi-modern .ytp-chrome-bottom{
+                    height:45px
+                    width:100% i
+                    margin-left:-12px
+                    background-image: linear-gradient(to top,var(--yt-spec-overlay-background-medium-light), transparent) i
+                }
+                .ytp-delhi-modern .ytp-time-wrapper:not(.ytp-miniplayer-ui *)
+                .ytp-delhi-modern .ytp-time-display:not(.ytp-miniplayer-ui *){
+                    background: transparent i /*time*/
+                    padding:3px i
+                }
+                .ytp-delhi-modern.ytp-delhi-horizontal-volume-controls .ytp-volume-area{
+                    margin:0px
+                    margin-top:7px
+                    background:transparent i
+                }
+                .ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls
+                .ytp-button:not([aria-disabled="true"]):not([disabled]):not([aria-hidden="true"])
+                {
+                    margin-left:4px i
+                    background:transparent i 
+                    padding:0px
+                }
+               .ytp-delhi-modern .ytp-prev-button:not(.ytp-miniplayer-button-container > *){
+                   order:-1 /*set back in playlist to left most*/
+               }
+               
+               .ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls .ytp-pip-button{
+                    display:block i
+                    svg{
+                        position:relative
+                        left: -12px i
+                        top: -8px i;
+                    }
+               }
+               
+                /*fix weird video under video (js time)*/
+                
+               /*----------*/
+
+
+
+               ytd-watch-metadata[description-collapsed][enable-color-sampling] #description.ytd-watch-metadata:hover{
+                   background:transparent i /*transparent hover over discription*/
+               }
+               ytd-watch-flexy[show-expandable-metadata] ytd-watch-metadata.ytd-watch-flexy{
+                   margin-bottom:35px i;
+               }
+            }
+                 
+            if rich_renderer == 1{
+                
+                .ytdTalkToRecsFlowRendererHost{
+                    display:none /*ask for videos any way you like*/
+                }
+                ytd-brand-video-shelf-renderer[rounded-container]:not([is-first-feed-item]){
+                    display:none
+                }
+                [page-subtype="home"] #contents.ytd-rich-grid-renderer > ytd-rich-section-renderer:has(ytd-rich-shelf-renderer:not([is-shorts])):has(ytd-rich-item-renderer:not([is-post])){
+                    display:none /*news posts*/
+                }
+            }
+            
+            /*---------------------------------------------------------------------*/
+			if viewdebug == 1{
+                
+ 
+                
+				.bold.yt-formatted-string:not(a),
+				#date-text.ytd-watch-info-text,
+                #view-count.ytd-watch-info-text,
+                #info.ytd-watch-info-text      /*new*/{ 
+					outline: 1px dashed #00ff48 i /*date/views outline*/
+                    color:lime; /*date/views color*/
+				}
+                .bold.yt-formatted-string:not(a):-moz-only-whitespace{
+                    outline: none i /*whitespace execption*/
+                }
+                a.yt-simple-endpoint.yt-formatted-string 
+                a.yt-simple-endpoint.yt-formatted-string[is-empty]
+                a.yt-simple-endpoint.yt-formatted-string:visited{ 
+                    outline: 1px dashed magenta /*hashtags outline*/
+                    color:#fe019a /*hashtags color*/
+                }
+                #view-count.ytd-watch-info-text /*live view count color*/
+                #date-text.ytd-watch-info-text{/*live time/date color*/
+                    margin-top:px /*move live numbers down*/
+                    color:#aeff00 i /*live numbers color*/
+                    outline: 1px dashed #edfe00 /*live numbers outline*/
+                }
+                .bold.yt-formatted-string{
+                    pointer-events:all /*interaciton for views/date*/
+                }
+                ytd-video-owner-renderer{
+                    outline: 1px dashed #00fffb /*channel info*/
+                }
+			}
+			/*---------------------------------------------------------------------*/
+			
+            #top-row.ytd-video-secondary-info-renderer{
+                display:none; /* remove old channel title*/
+            }
+            
+            #actions.ytd-watch-metadata{
+                min-width:0px /*move like buttons over*/
+            }
+            
+            .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled{
+                color:white
+                background:transparent /*transparent join button*/
+            }
+           
+           
+            
+            ytd-video-owner-renderer.ytd-video-secondary-info-renderer{
+                border-style: solid i; /*debug border*/
+                border-width: 1px
+                border-color: green;  
+            }
+            #owner.ytd-watch-metadata {
+                display:flex
+                min-width: 100%
+            
+                margin-top:75px
+                margin-bottom:-69px
+                
+                border-style: solid i;
+                border-width: 0px
+                border-color: #f00;
+            
+            }
+            
+            ytd-video-primary-info-renderer{
+                margin-top:-75px /*view count height*/
+            }
+            #meta-contents[hidden]{
+                margin-top:70px
+            }
+           
+            
+            
+            ytd-watch-metadata{
+                .ytAnimatedActionContentWithBackground{
+                    position: absolute /*keeps subscribe button inplace on watch page when subbed */
+                    right: 0px;
+                }
+            }
+            
+        } /*end missing channel info test*/
+        
+        [dir="ltr"] ytd-watch-info-text:not([detailed]) #info-container.ytd-watch-info-text,
+        ytd-watch-info-text:not([detailed]) #info-container.ytd-watch-info-text[dir="ltr"]{
+            mask-image:none /*stop text fading*/
         }
 
         .super-title.ytd-video-primary-info-renderer:not([is-empty]) {
@@ -1890,10 +2399,6 @@ Support me: https://ko-fi.com/sapondanaisriwan
             position: relative;
         }
         
-/*         #owner.ytd-watch-metadata {
-            min-width: unset;
-        } */
-        
         ytd-video-primary-info-renderer {
             padding: 0 i;
             border: none;
@@ -1920,11 +2425,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
             position: relative i;
             z-index: 1;
         }
-        
-        #top-row.ytd-watch-metadata {
-            border-bottom: 1px solid var(--yt-spec-10-percent-layer);
-            padding-bottom: 10px;
-        }
+    
         
 /*         ytd-video-primary-info-renderer[has-date-text] #info-text.ytd-video-primary-info-renderer {
             display: flex i;
@@ -1932,7 +2433,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
         
         ytd-video-primary-info-renderer #container > :not(#info) {
             display: none i;
-        } */
+        } 
         
         #comment-teaser.ytd-watch-metadata {
             display: none;
@@ -1957,9 +2458,15 @@ Support me: https://ko-fi.com/sapondanaisriwan
             max-height: 4rem;
         }
 
+   
+        
+        
+        
+        
+        
         /* View count and the upload date */
         ytd-video-meta-block[rich-meta] #metadata-line.ytd-video-meta-block,
-
+        
         /* Channel author */
         ytd-video-meta-block[rich-meta] #byline-container.ytd-video-meta-block {
             font-family: "Roboto", "Arial", sans-serif;
@@ -2321,9 +2828,18 @@ Support me: https://ko-fi.com/sapondanaisriwan
         }
     }
 
+    
     if (customOldLayout=="Enabled") {
-
+        
         /* ⚙️ Avatar Roundness */
+        /*new fix*/
+        .ytd-comment-view-model yt-img-shadow.ytd-comment-view-model , /*commenter avatars*/
+        .yt-spec-avatar-shape__image{                                  /*channel avatars*/
+            border-radius: profileRadius;
+        }
+        
+        
+        
         #avatar {
             &.ytd-video-owner-renderer,
             &.ytd-c4-tabbed-header-renderer,
@@ -2334,11 +2850,12 @@ Support me: https://ko-fi.com/sapondanaisriwan
             &.ytd-shelf-renderer,
             &.ytd-topic-channel-details-renderer,
             &.ytd-video-description-header-renderer,
+            .yt-spec-avatar-shape__image
             &.ytd-watch-card-rich-header-renderer {
                 border-radius: profileRadius;
             }
         }
-
+        
         #author-thumbnail {
             &.ytd-comment-simplebox-renderer,
             &.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer,
@@ -2385,7 +2902,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 border-radius: profileRadius;
             }
         }
-
+        
         .ytp-ce-channel {
             border-radius: profileRadius;
             .ytp-ce-expanding-image,
@@ -2441,6 +2958,20 @@ Support me: https://ko-fi.com/sapondanaisriwan
         ytd-searchbox[desktop-searchbar-style=rounded_corner_autofocus] #search-icon-legacy.ytd-searchbox,
 
         /* No rounded thumbnails */
+        /*new fix*/
+        .yt-thumbnail-view-model--large                     /*video thumbnails home page*/
+        .ytThumbnailViewModelLarge
+        .yt-thumbnail-view-model--medium                    /*video thumbnails reccomendation*/
+        .ytThumbnailViewModelMedium
+        .thumbnail-container.ytd-notification-renderer      /*video thumbnails notification*/
+        .collections-stack-wiz__collection-stack1--large    /*mix thumbnails home page*/
+        .collections-stack-wiz__collection-stack1--medium   /*mix thumbnails reccomendation*/
+        .collections-stack-wiz__collection-stack2           /*mix bg squares*/
+        .ytCollectionsStackCollectionStack1 
+        .ytCollectionsStackCollectionStack2
+        .ytdMiniplayerComponentContent                      /*miniplayer*/
+        ytd-playlist-panel-renderer:not([within-miniplayer]) #container.ytd-playlist-panel-renderer /*mix/queue/playlist watch page*/
+        
         ytd-thumbnail[size=medium] a.ytd-thumbnail,
         ytd-thumbnail[size=medium]:before,
         .yt-simple-endpoint.inline-block.style-scope.ytd-thumbnail,
@@ -2659,7 +3190,14 @@ Support me: https://ko-fi.com/sapondanaisriwan
                 }
             }
         }
-
+        /*new fix*/
+        if chipRadius ==1 { /*chip buttons radius toggle*/
+            .ytChipShapeInactive,.ytChipShapeActive{   
+            border-radius: buttonRadius i; /*chip radius tied to button radius*/
+            }
+        }
+        
+        
         #copy-button,
         #submit-button {
             > yt-button-shape > button {
@@ -2836,10 +3374,7 @@ Support me: https://ko-fi.com/sapondanaisriwan
         }   
     }
     
-    /* Remove thumbnail stack */
-    /*yt-collections-stack {
-        display: none;
-    }
+
     
     /* Remove shop section */
     ytd-merch-shelf-renderer.ytd-watch-flexy {
@@ -3022,12 +3557,32 @@ Support me: https://ko-fi.com/sapondanaisriwan
         }
     }
     
-    if (customOldLayout=="Enabled" && oldIcons) {
+    if (customOldLayout=="Enabled" && oldIcons) { 
+        
+        /*new fix*/
+        .yt-spec-touch-feedback-shape__fill
+        .yt-spec-button-shape-next.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next--icon-button{
+             background: var(--yt-spec-general-background-a) i; /*set queue and watch later overlay buttons bg color*/
+             
+            /*needs to be more sepcfix, still effects "..." */
+        }
+    
+        /*only overrides with important*/
+        .yt-simple-endpoint.style-scope.ytd-subscription-notification-toggle-button-renderer yt-icon-button
+        .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text, /*comment replies button*/
+        .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal /*join, like, share*/
+        .yt-spec-button-shape-next.yt-spec-button-shape-next--text.yt-spec-button-shape-next--icon-only-default, /*voice search, arrows, notif settings*/
+        .yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--tonal /*create*/
+
+        {
+            background-color:  /*color*/
+        }
         
         svg:not(:root) {
             overflow: visible;
         }
 
+            
         html[system-icons]:not([dark]) {
             ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer {
                 color: var(--yt-spec-static-brand-red);
@@ -3473,8 +4028,8 @@ Support me: https://ko-fi.com/sapondanaisriwan
 
         #flexible-item-buttons span,
         #top-level-buttons-computed span,
-        yt-animated-rolling-number {
-            color: #909090 i;
+        {
+            color: #909090 ;
         }
     }
 }
